@@ -43,7 +43,7 @@ void sort(int tab [], int n){
      * Jeśli po przeszukaniu regału w poszukiwaniu liczby mniejszej od liczby znajdującej się w
      * szufladce o indeksie j (!) takowa się znajdzie,
      * to przenosimy zawartość (mniejszą liczbę) tej mniejszej szufladki (której
-     * indeks będzie tymczasowo przechowywała zmienna i (żeby nie zgubić indeksu,
+     * indeks będzie tymczasowo przechowywała zmienna) i (żeby nie zgubić indeksu,
      * zapisujemy go do zmiennej minIndex) do szufladki o indeksie j, natomiast liczbę
      * która wcześniej znajdowała się szufladce j przenosimy do pustej szufladki, o indeksie minIndex, która
      * wcześniej zawierała mniejszą liczbę. Bardziej zrozumiale - zamieniamy miejscami tab[j] z tab[minIndex],
@@ -56,11 +56,10 @@ void sort(int tab [], int n){
         arrayDisplayer(tab,n);
         /* zapisuję wartość minIndex jako j, żeby wiedzieć od którego elementu zaczynam poszukiwania wartości
          * mniejszej od tab[j]
-         */
-        //dlaczego minIndex ma wartość j? Tłumaczę po zakończeniu pętli
+        dlaczego minIndex ma wartość j? Tłumaczę po zakończeniu pętli */
         int minIndex = j;
         /* Druga pętla, wewnętrzna, odpowiada za przeszukanie tablicy od komórki którą uznajemy za nieposortowaną
-         * [dlatego i = j, ponieważ przed indeksem j tablica jest albo nie istnieje <i < 0> albo jest posortowana
+         * [dlatego i = j, ponieważ przed indeksem j tablica jest albo nie istnieje [i < 0] albo jest posortowana
          * (kolejne iteracje już poprzenosiły mniejsze liczby, nie ma sensu ponownie zaczynać od zera, to
          * martnotrawstwo pamięci].
          *
